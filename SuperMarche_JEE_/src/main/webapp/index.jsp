@@ -15,7 +15,6 @@ ArrayList<Panier> list_Panier=(ArrayList<Panier>) session.getAttribute("list-Pan
 if(list_Panier!=null){
 	request.setAttribute("list_Panier",list_Panier);
 }
-
 %>
 
 <!DOCTYPE html>
@@ -86,8 +85,14 @@ background-image:url("abtal.jpeg")
 						<h6 class="categorie">categorie:<%= p.getCategorie() %></h6>
 						<div class="mt-3 d-flex justify-content-between">
 						<a href="Ajouter_Au_Panier?id=<%= p.getId() %>" class="btn btn-primary btn-dark">Ajouter</a>
-						<a href="acheter_maintenant?quantite=1&id=<%= p.getId() %>" class="btn btn-primary">Acheter</a>
+						<a href="paymentPage.jsp?quantite=1&id=<%= p.getId() %>" class="btn btn-primary">Acheter</a>
 						
+						
+						
+						
+						<%
+						//<a href="acheter_maintenant?quantite=1&id=<%= p.getId() %><%//" class="btn btn-primary">Acheter</a>
+						%>
 						</div>
 					
 						

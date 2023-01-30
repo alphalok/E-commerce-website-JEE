@@ -42,7 +42,7 @@ if (list_Panier != null) {
 	<div class="container">
 		<div class="d-flex py-3">
 			<h3>Prix Total:${ (total>0)?total:0 }Dh</h3>
-			<a class="mx-3 btn btn-primary" href="finaliser-achat">Payer Maintenant</a>
+			<a class="mx-3 btn btn-primary" href="paymentPage.jsp">Payer Maintenant</a>
 		</div>
 		<table class="table table-loght">
 			<thead>
@@ -65,7 +65,7 @@ if (list_Panier != null) {
 					<td><%=c.getCategorie()%></td>
 					<td><%=c.getPrix()%></td>
 					<td>
-						<form action="acheter_maintenant" method="post" class="form-inline">
+						<form action="paymentPage.jsp" method="get" class="form-inline">
 							<input type="hidden" name="id" value="<%=c.getId()%>"
 								class="form-input">
 							<div class="form-group d-flex justify-content-between w-50">

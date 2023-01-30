@@ -33,6 +33,7 @@ public class Acheter_Servlet extends HttpServlet {
 			Utilisateur auth=(Utilisateur) request.getSession().getAttribute("auth");
 			if(auth!=null) {
 				String produitId=request.getParameter("id");
+				System.out.print(produitId);
 				int produitQuantite=Integer.parseInt(request.getParameter("quantite"));
 				if(produitQuantite<=0) {
 					produitQuantite=1;
